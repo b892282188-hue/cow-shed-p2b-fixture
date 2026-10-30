@@ -12,3 +12,14 @@ def add(a, b):
 def subtract(a, b):
     """Return a minus b."""
     return a - b
+
+
+def clamp(value, low, high):
+    """Return value limited to the inclusive range from low to high."""
+    if low > high:
+        raise ValueError("low must not exceed high")
+    if value < low:
+        return low
+    if value > high:
+        return high
+    return value
